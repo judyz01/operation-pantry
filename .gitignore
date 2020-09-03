@@ -5,10 +5,10 @@ yarn-error.log
 package-lock.json
 
 # Build directory
-/public
 .DS_Store
 
 .vscode/
 
 # web
 firebase-config.js
+.firebase

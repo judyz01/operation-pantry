@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    <title>OperationPantry</title>
+    <link href="main.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Questrial">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=News+Cycle">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Coming+Soon">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+  </head>
+  <body>
+  </body>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="firebase-config.js"></script>
+
+
+  <header>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inner">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand brand" href="#">ASUCD Pantry</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+    <a name="home"></a>
+    <div class="container-fluid">
+      <div class="more-space row">
+        <div class="col-md-12">
+          <div class="text-center intro">
+            <h1 style="color:white; font-size: 125px">Welcome to Operation Pantry!</h1>
+            <h4 style="font-size: 60px">Showing real time inventory for your convenience</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </header>
+
+  <!----ABOUT US---->
+
+  <div class="about-us" id="startchange">
+    <a name="about"></a>
+    <div class="container-fluid">
+      <div class="row text-center">
+        <div class="descript col-xs-12 col-sm-12 col-md-12">
+          <h1 style="color:white">ABOUT</h1>
+          <p class="about-us-p" style ="font-size: 40px;">We aim to show inventory of the ASUCD pantry in real time by utilizing Firebase along with a Raspberry Pi and an Arduino scale.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!----SERVICES---->
+  <div class="works">
+    <a name="works"></a>
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="text-center col-xs-12 col-sm-12 col-md-12">
+          <h1>FOOD</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <div class="thumbnail">
+            <img src="https://dollardays.imgix.net/images/m103/image2/f25-2509116-4200hr-dd.jpg?auto=compress,format&sharp=20&w=350&h=350&bg=ffffff&trim=color&fit=fillmax" class="img-responsive" />
+            <div class="caption">
+              <h3 style="text-align:center; font-size: 40px;"">Cereal</h3>
+              <p id="insert" style="text-align:center; font-size: 40px;"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <div class="thumbnail">
+            <img src="https://hip2save.com/wp-content/uploads/2010/02/mahatmarice_full.jpg" class="img-responsive" />
+            <div class="caption">
+              <h3 style="text-align:center; font-size: 40px;"">Rice</h3>
+              <p style="text-align:center; font-size: 40px;"">38</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <div class="thumbnail">
+            <img src="https://target.scene7.com/is/image/Target/GUEST_69f3732a-ca72-4c7e-9cc9-8ac2f6e592f0?wid=488&hei=488&fmt=pjpeg" class="img-responsive" />
+            <div class="caption">
+              <h3 style="text-align:center; font-size: 40px;"">Beans</h3>
+              <p style="text-align:center; font-size: 40px;"">42</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="space row">
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <div class="thumbnail">
+            <img src="https://i5.walmartimages.com/asr/5f1a3904-e90c-4094-a4cd-cc2c5e141306_1.19cfad58acf53c1632cff07954a0f727.jpeg?odnWidth=450&odnHeight=450&odnBg=ffffff" class="img-responsive" />
+            <div class="caption">
+              <h3 style="text-align:center; font-size: 40px;"">Spaghetti</h3>
+              <p style="text-align:center; font-size: 40px;"">5</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <div class="thumbnail">
+            <img src="https://target.scene7.com/is/image/Target/GUEST_c88c60e1-b7c7-43a0-938b-6b5607bd54d2?wid=488&hei=488&fmt=pjpeg" class="img-responsive" />
+            <div class="caption">
+              <h3 style="text-align:center; font-size: 40px;"">Cheese Puffs</h3>
+              <p style="text-align:center; font-size: 40px;"">0</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <div class="thumbnail">
+            <img src="https://www.meijer.com/content/dam/meijer/product/0071/92/8345/83/0071928345836_2_A1C1_1200.png" class="img-responsive" />
+            <div class="caption">
+              <h3 style="text-align:center; font-size: 40px;"">Juice</h3>
+              <p style="text-align:center; font-size: 40px;"">12</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+
+  <div class="break1 container-fluid text-center">
+    <h3>Come connect with us!</h3>
+  </div>
+
+  <div class="contact text-center">
+    <a name="contact"></a>
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+          <h1>CONTACT</h3>
+        </div>
+      </div>
+      
+      <div class="row">
+      
+        <div class="col-xs-12 col-sm-12 col-md-12">
+          <h2>Connect with the ASUCD Pantry at: </h2>
+          <p>thepantry@asucd.ucdavis.edu</p>
+          <br/>
+          <br/>
+          <h3>Or, you could get in touch with us on social media</h3>
+        </div>
+        
+      </div>
+      
+      <div class="row social-media-row-1">
+        
+        <div class="icon col-xs-6 col-sm-6 col-md-6">
+          <a href="https://www.facebook.com/ucdpantry/"><i class="fa fa-facebook"></i></a>
+        </div>
+        <div class="icon col-xs-6 col-sm-6 col-md-6">
+          <a href="https://twitter.com/ThePantryDavis?s=20"><i class="fa fa-twitter"></i></a>
+        </div>
+        
+      </div>
+      
+  
+      
+      
+      
+    </div>
+    
+  </div>
+
+<footer>
+  <div class="container-fluid">
+    
+    <div class="row">
+      
+      <div class="text-center go-up-icon col-xs-12 col-sm-6 col-md-6">
+        <a href="#home"><i class="fa fa-angle-up"></i></a>
+      </div>
+      
+      <div class="col-xs-12 col-sm-6 col-md-6">
+        <p>HackDavis 2020</p>
+      </div>
+      
+    </div>
+    
+  </div>
+</footer>
+
+</html>
+
